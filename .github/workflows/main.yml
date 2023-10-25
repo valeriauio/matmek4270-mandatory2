@@ -26,4 +26,4 @@ jobs:
         pip install pytest numpy sympy scipy
     - name: Test with pytest
       run: |
-        pytest -v galerkin.py
+        pytest -v -W ignore::pytest.PytestCollectionWarning galerkin.py
