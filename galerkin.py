@@ -265,9 +265,9 @@ class Composite(FunctionSpace):
 
     .. math::
 
-        s_{ij} = \delta_{ij} - \delta_{i, j-2}, \quad (i, j) \in (0, 1, \ldots, N) \times (0, 1, \ldots, N+2)
+        s_{ij} = \delta_{ij} - \delta_{i+2, j}, \quad (i, j) \in (0, 1, \ldots, N) \times (0, 1, \ldots, N+2)
 
-    Note that the stencil matrix is of shape :math:`(N+1) \times (N+3)`
+    Note that the stencil matrix is of shape :math:`(N+1) \times (N+3)`.
     """
 
     def eval(self, uh, xj):
